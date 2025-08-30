@@ -110,7 +110,8 @@ npm start
 
 **Via NPM:**
 ```bash
-npm install axcora
+npm install axcora             # bundle ssg + css
+npm install axcora-css         # install css components only
 ```
 
 **Or inject via CDN:**  
