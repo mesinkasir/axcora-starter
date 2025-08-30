@@ -147,6 +147,111 @@ myproject/
 
 ---
 
+## 🧩 Using Components in Markdown & Templating
+
+Axcora enables **per-page component usage** via frontmatter in your markdown and `.axcora` template layouts. The build system will analyze your needs and automatically bundle and minify only the CSS and JS you specify—resulting in highly optimized, modern static sites.
+
+### Markdown Article Example
+
+```markdown
+---
+title: "Blockquote"
+date: "2025-08-22"
+tags: 
+  - blockquote
+  - blockquote axcora
+  - blockquote components
+category: "components"
+description: "How to use blockquote component"
+image: "/img/ax-1.jpg"
+css:
+  theme: 'essentials'
+  components:
+    - buttons
+    - navbar
+    - blockquote
+    - hero
+    - breadcrumb
+    - pagination
+    - image
+    - cards
+js:
+  - navbar
+  - theme
+---
+The **Blockquote component** in Axcora SSG provides a visually appealing way to display quotations, statements, or testimonials, allowing emphasis and proper attribution for quoted material within both templates and article content.
+
+> “This is a sample blockquote. Use it to highlight important content, testimonials, or citations.”
+```
+
+- **What happens?**  
+  - Only listed CSS components and JS modules will be included for this page.
+  - Axcora generates optimized, minified CSS/JS based on this configuration.
+  - You can use blockquotes and other components directly in your markdown content, taking advantage of the imported styles and logic.
+
+---
+
+### Axcora Templating Example (`.axcora`)
+
+Frontmatter and template code (`src/templates/blog/single.axcora`):
+
+```axcora
+---
+layouts: base
+css:
+  theme: 'essentials'
+  components:
+    - buttons
+    - navbar
+    - badge
+    - hero
+    - breadcrumb
+    - pagination
+    - cards
+js:
+  - navbar
+  - theme
+---
+<header class="hero container content-start mb-3">
+  <div class="hero-content">
+    <h1>
+      <a href="{{url}}" class="text-white text-decoration-none">{{ name }}</a>
+    </h1>
+    <p class="lead text-muted">{{ description }}</p>
+  </div>
+</header>
+
+<!-- Usage in template (example): -->
+<blockquote class="axcora-blockquote">
+  <p>{{ quote }}</p>
+  <footer>{{ author }}</footer>
+</blockquote>
+```
+
+- **What happens?**  
+  - Each template can define its own CSS/JS needs in its frontmatter.
+  - When rendered, the page will include only the selected CSS components and JavaScript for optimal performance.
+  - Use all Axcora UI elements (e.g. blockquote, badges, buttons) directly in your layouts, inheriting from the theme and components you specify.
+
+---
+
+### 💡 **Why Component-Level Import?**
+
+- **Ultra-fast builds & loads:** No global bloated CSS—only what’s needed, per-page.
+- **Modular:** Easily control which features or UI parts are available on each page or template.
+- **Productivity:** Organize content, structure, and appearance via frontmatter and templates without ever editing raw CSS or JS!
+
+---
+
+For a full list of available components and layout examples, [see the documentation](https://ssg.axcora.com/components/).
+
+---
+
+**Tip:**  
+When you add or remove components in `css.components` or `js`, the build output will automatically change to include only those assets—making your site lighter and faster.
+
+---
+
 ## 🙌 Support This Project
 
 - [Donate via Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JVZVXBC4N9DAN)  
