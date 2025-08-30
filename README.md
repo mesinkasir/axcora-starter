@@ -252,6 +252,185 @@ When you add or remove components in `css.components` or `js`, the build output 
 
 ---
 
+## 🧱 Ready-to-Use Axcora Components
+
+Axcora ships with a growing library of elegant, production-ready UI components.  
+You can use these components directly inside your markdown articles **and** `.axcora` templates using simple, readable tags. The build system will collect and render them as semantic HTML with the appropriate CSS and JS automatically applied.
+
+### Example: Using Components in Markdown & Templates
+
+**Button Component**
+```markdown
+{% axcora-button text="Click Me" href="/" color="primary" /%}
+```
+
+**Accordion Component**
+```markdown
+{% axcora-accordion 
+    id="demo"
+    title1="Axcora Accordion"
+    text1="hello world lorem ipsum dolor"
+    title2="Axcora Accordion 2"
+    text2="hello world lorem ipsum dolor 2"
+    title3="Axcora Accordion 3"
+    text3="hello world lorem ipsum dolor 3"
+/%}
+```
+
+You can use these tags inside your `.md` content or `.axcora` templates.  
+**Each component tag will be rendered into styled HTML and only the required CSS/JS will be included in the final build.**
+
+---
+
+### 🔥 Popular Components
+
+- `{% axcora-button %}` – Stylish buttons with color, link, and icon support.
+- `{% axcora-accordion %}` – Expandable/collapsible content areas.
+- `{% axcora-badge %}` – Highlighted badges for status and info.
+- `{% axcora-blockquote %}` – Attractive blockquotes/testimonials.
+- `{% axcora-hero %}` – Large visual “hero” sections for splash headlines.
+- `{% axcora-card %}` – Cards for content, images, and feature boxes.
+- `{% axcora-navbar %}` – Responsive page navigation.
+- `{% axcora-tabs %}` – Tabbed content switching.
+- `{% axcora-toast %}` – Toast/notification messages.
+- `{% axcora-image %}` – Responsive images.
+
+…and many more!
+
+---
+
+### 🚀 **How It Works**
+
+1. **Add components in your markdown or `.axcora` template** using their respective tags and desired attributes.
+2. **Declare the required components in your frontmatter** under `css.components` and `js` (see previous section), or set them globally in your layout.
+3. **Axcora SSG automatically renders the component HTML and bundles/minifies only the CSS/JS you use** for each page.
+
+---
+
+> For a full list of available components, usage options, and demos, see the [Axcora Components Documentation](https://ssg.axcora.com/components/).
+
+---
+
+This makes building advanced, modular static sites fast, intuitive, and fully customizable—no manual JavaScript or CSS imports needed. Use components where you want them, and enjoy optimal performance by design.
+
+---
+
+## 🎨 Theme Your Site: Flexible Built-in Themes
+
+Axcora ships with a suite of vibrant, production-ready CSS themes you can choose and swap at any time—whether you love minimalist, brutalist, corporate, or neon cyberpunk vibes.
+
+**Just specify your preferred theme in your frontmatter or template:**
+
+```yaml
+css:
+  theme: "essentials"    # Pick from: essentials, brutal, corporate, cyberpunk, dark, minimal, startup
+```
+
+### **Available Themes**
+| Theme      | Description                    |
+| ---------- | ----------------------------- |
+| `essentials` | Clean, modern, accessible UI – default “sane” look for blogs, docs, all-purpose |
+| `brutal`     | Bold, thick lines & neon gradient—90s brutalist & fun, great for creative sites |
+| `corporate`  | Flat, pro, business/classic – ideal for company portals or portfolios           |
+| `cyberpunk`  | Neon, glowing, synthwave gradients – inspired by the digital future             |
+| `dark`       | Universal dark mode — great for night reading and moody aesthetics              |
+| `minimal`    | Ultra-clean, understated, reader-first layouts – focus on content               |
+| `startup`    | Stylish, colorful, and dynamic – perfect for landing pages, projects            |
+
+
+### **How To Use Themes**
+
+In your Markdown or `.axcora` template frontmatter:
+
+```yaml
+css:
+  theme: "cyberpunk"
+  components:
+    - buttons
+    - blockquote
+    - navbar
+```
+
+Or swap it any time to:
+
+```yaml
+css:
+  theme: "minimal"
+```
+
+Axcora will **automatically import and optimize** the right theme styles and variables for you.
+
+---
+
+### **How to Install Extra Themes (Optional)**
+
+All official themes are available as individual packages:
+
+- `axcora-theme-essentials`
+- `axcora-theme-brutal`
+- `axcora-theme-corporate`
+- `axcora-theme-cyberpunk`
+- `axcora-theme-dark`
+- `axcora-theme-minimal`
+- `axcora-theme-startup`
+
+Install just the one(s) you need:
+
+```bash
+npm install axcora-theme-cyberpunk
+npm install axcora-theme-brutal
+```
+
+**Or install all to explore:**
+
+```bash
+npm install axcora-theme-essentials axcora-theme-brutal axcora-theme-corporate axcora-theme-cyberpunk axcora-theme-dark axcora-theme-minimal axcora-theme-startup
+```
+
+---
+
+### **Preview Theme Variables**
+Each theme offers its own palette and font/spacing system—here’s a quick peek on how they feel:
+
+- **Essentials:** Modern, balanced variables for backgrounds, primary/secondary colors, muted states, alert programs, global spacing, border radius, and responsive text—optimized for dark/light.
+- **Brutal:** Strong color contrasts, boxy radiuses, neon highlights and heavy outlines for creative impact.
+- **Cyberpunk:** Bright gradients, glowing borders, neon fonts and backgrounds, dark digital mood.
+- **Minimal:** White background, nearly monochrome text, minimalist subtle shadows and muted accents.
+- **Dark:** Readable, low-fatigue backgrounds and text, universal dark mode experience.
+- **Corporate:** Office-inspired, classic styling, flat color blocks and understated detail.
+- **Startup:** Vibrant, fresh, colorful, full of modern design energy.
+
+---
+
+### **Example: Switch Theme Per Page**
+Want a wild cyberpunk homepage but a minimal docs section?  
+Just pick a theme per file:
+
+```yaml
+---
+css:
+  theme: "cyberpunk"
+---
+```
+and
+```yaml
+---
+css:
+  theme: "minimal"
+---
+```
+**Mix, match, override!**
+
+---
+
+💡 **Tip:** All of these themes are fully compatible with the Axcora component system and support both light and dark mode (where available).
+
+---
+
+_Easily set your brand or project style—no more fiddling with config or hand-written CSS. Just pick your theme and build!_
+
+---
+
 ## 🙌 Support This Project
 
 - [Donate via Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JVZVXBC4N9DAN)  
