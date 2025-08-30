@@ -433,7 +433,7 @@ _Easily set your brand or project style—no more fiddling with config or hand-w
 
 ## 🙌 Support This Project
 
-- [Donate via Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JVZVXBC4N9DAN)  
+- [Donate via Paypal](https://www.paypal.com/paypalme/creativitas)  
 - [Sponsor on Github](https://github.com/sponsors/mesinkasir)
 - [Coffee/Gumroad](https://creativitaz.gumroad.com/coffee)
 
