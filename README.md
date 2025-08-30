@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/axcora.svg?style=flat-square)](https://npmjs.com/package/axcora)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Support](https://img.shields.io/badge/Support-Donate-blue)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JVZVXBC4N9DAN)
+[![Support](https://img.shields.io/badge/Support-Donate-blue)](https://www.paypal.com/paypalme/creativitas)
 
 > **All-in-One Static Site Generator & CSS Framework**  
 > Build modern, responsive static sites with a powerful build system, reusable UI components, auto-SEO, and built-in dark mode—all in one toolkit.
