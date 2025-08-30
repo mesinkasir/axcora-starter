@@ -1,6 +1,6 @@
 {
   "name": "axcora-ssg-starter",
-  "version": "1.0.1-zeus",
+  "version": "1.0.0-athena",
   "description": "Starter template for Axcora Static Site Generator including default config, templates, and sample content.",
   "keywords": [
     "axcora",
@@ -15,11 +15,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/axcora/axcorassg"
+    "url": "https://github.com/mesinkasir/axcora-starter"
   },
   "files": [
     "src/",
     "content/",
+    "scripts/",
     "static/",
     "README.md",
     "axcora.config.ts",
@@ -29,7 +30,7 @@
     "LICENSE"
   ],
   "dependencies": {
-    "axcora": "^1.0.1-zeus",
+    "axcora": "^1.0.0-athena",
     "axcora-accordion": "^1.0.0",
     "axcora-badge": "^1.0.0",
     "axcora-blockquote": "^1.0.0",
@@ -67,8 +68,7 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-	"axcora-rocket": "npm run compile && npm run build",
-    "compile": "tsc --build",
+    "compile": "tsc --build ",
     "postinstall": "tsx src/config/postinstall-copy-components.ts && npm run compile",
     "dev": "axcora dev",
     "build": "axcora build",
