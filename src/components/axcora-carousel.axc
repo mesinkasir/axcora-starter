@@ -1,0 +1,35 @@
+<div class="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{image1}}" class="img-fluid" loading="eager" alt="{{title1}}">
+      <div class="carousel-caption">{{text1}}</div>
+    </div>
+    {{#if image2}}<div class="carousel-item">
+      <img src="{{image2}}" class="img-fluid" loading="lazy" alt="{{title2}}">
+      <div class="carousel-caption">{{text2}}</div>
+    </div>{{/if}}
+    {{#if image3}}<div class="carousel-item">
+      <img src="{{image3}}" class="img-fluid" loading="lazy" alt="{{title3}}">
+      <div class="carousel-caption">{{text3}}</div>
+    </div>{{/if}}
+    {{#if image4}}<div class="carousel-item">
+      <img src="{{image4}}" class="img-fluid" loading="lazy" alt="{{title4}}">
+      <div class="carousel-caption">{{text4}}</div>
+    </div>{{/if}}
+    {{#if image5}}<div class="carousel-item">
+      <img src="{{image5}}" class="img-fluid" loading="lazy" alt="{{title5}}">
+      <div class="carousel-caption">{{text5}}</div>
+    </div>{{/if}}
+  </div>
+  <button class="carousel-control-prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+  <div class="carousel-indicators">
+    <button class="active"></button>
+    <button></button>
+    <button></button>
+  </div>
+</div>

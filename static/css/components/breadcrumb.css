@@ -1,0 +1,61 @@
+/*!
+ * Axcora Breadcrumb Navigation
+ * Beautiful navigation trails for enhanced user experience
+ */
+
+/* ===== BREADCRUMB COMPONENT ===== */
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: var(--spacing-sm) 0;
+  border-radius: var(--radius-md);
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "/";
+  margin: 0 var(--spacing-sm);
+  color: var(--s400);
+  font-weight: 400;
+}
+
+.breadcrumb-item a {
+  color: var(--p500);
+  text-decoration: none;
+  transition: color var(--transition-normal);
+  font-weight: 500;
+}
+
+.breadcrumb-item a:hover {
+  color: var(--p600);
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: var(--s600);
+  font-weight: 400;
+}
+
+/* Modern Breadcrumb with Background */
+.breadcrumb-modern {
+  background-color: var(--s50);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--s200);
+}
+
+[data-theme="dark"] .breadcrumb-modern {
+  background-color: var(--s800);
+  border-color: var(--s700);
+}
+[data-theme="dark"] .breadcrumb-item.active {
+  color: var(--s300);
+  font-weight: 400;
+}

@@ -1,0 +1,11 @@
+<div class="search-widget">
+  <div class="search-input-wrapper">
+    <input 
+      type="text" 
+      id="searchBox" 
+      placeholder="🔍 Search posts..." 
+      class="search-widget-input"
+    >
+  </div>
+  <div id="searchResults" class="search-widget-results"></div>
+</div>

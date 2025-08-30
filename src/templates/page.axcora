@@ -1,0 +1,34 @@
+---
+layouts: base
+css:
+  theme: 'essentials'
+  components:
+    - buttons
+    - navbar
+    - breadcrumb
+    - forms
+    - cards
+    - accordion
+    - image
+    - badge
+js:
+  - navbar
+  - theme
+---
+<section class="container content-start">
+  <div class="container">
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-modern p-3">
+        <li class="breadcrumb-item"><a href="{{site.url}}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+    </ol>
+</nav>
+    <div class="card mt-3 mb-4">
+      <div class="card-body p-5">
+        <h1 class="text-3xl mb-3"><strong><a href="{{url}}">{{ title }}</a></strong></h1>
+        <h2 class="font-light mb-3">{{ description }}</h2>
+		{{content}}
+      </div>
+    </div>
+  </div>
+</section>

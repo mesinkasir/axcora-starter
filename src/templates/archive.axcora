@@ -1,0 +1,68 @@
+---
+layouts: base
+css:
+  theme: 'essentials'
+  components:
+    - buttons
+    - navbar
+    - badge
+    - hero
+    - breadcrumb
+    - cards
+js:
+  - navbar
+  - theme
+---
+<header class="hero container content-start mb-3">
+  <div class="hero-content">
+    <h1>
+	  <a href="{{url}}" class="text-white text-decoration-none">{{ name }}</a>
+    </h1>
+    <p class="lead text-muted">{{ description }}</p>
+  </div>
+</header>
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-modern p-3">
+        <li class="breadcrumb-item"><a href="{{site.url}}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{name}}</li>
+    </ol>
+</nav>
+</div>
+  <main class="container mt-3">
+  <div class="row">  
+  {{#each posts}}
+    <div class="col-md-6 col-lg-4 mb-4">
+      <article class="card p-1">
+        {{#if category}}
+            <span class="ms-2"><a href="/categories/{{ category | slugify }}/"
+            class="btn btn-sm btn-info rounded-full mt-2">{{ category }}</a></span>
+            {{/if}}
+        {{#if image}}
+         <a href="{{url}}">{% axcora-image src="{{image or site.image}}" alt="{{title}}" /%}</a>
+        {{/if}}
+        
+        <div class="card-body">
+          <h2 class="card-title">
+            <a href="{{ url }}">{{ title }}</a>
+          </h2>         
+          <div class="card-meta mb-2">
+            <time class="text-muted text-small">{{ date | formatDate }}</time>
+          </div>
+        <p class="card-text">{{ description }}</p>
+          {{#if tags.length}}
+          <div class="tags mb-2">
+          {{#if tags.length}}
+<div class="d-flex mt-1 mb-2">{{ tags | joinTags }}</div>
+{{/if}}
+          </div>
+          {{/if}}
+        </div>
+        <a href="{{ url }}" class="btn btn-primary full">Read {{ title }} →</a>
+      </article>
+    </div>
+    {{/each}}
+	</div>
+  </main>
+</div>

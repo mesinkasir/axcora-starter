@@ -1,0 +1,15 @@
+build:
+  command: npm install && npm run build
+  output: public
+  environment:
+    NODE_VERSION: "20"
+    
+routing:
+  - source: "/assets/*"
+    headers:
+      Cache-Control: "public, max-age=31536000, immutable"
+      
+  - source: "/*"
+    headers:
+      X-Frame-Options: "DENY"
+      X-Content-Type-Options: "nosniff"

@@ -1,0 +1,6 @@
+<div class="hero">
+  <div class="hero-content">
+    <h1 class="text-light">{{title}}</h1>
+    <p>{{text}}</p>
+  </div>
+</div>

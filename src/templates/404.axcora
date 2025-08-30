@@ -1,0 +1,27 @@
+---
+layouts: base
+css:
+  theme: 'essentials'
+  components:
+    - buttons
+    - navbar
+js:
+  - navbar
+---
+<header class="hero container content-start mb-3">
+  <div class="hero-content">
+    <h1>
+	  <a href="{{url}}" class="text-white text-decoration-none">{{ title }}</a>
+    </h1>
+    <p class="lead text-muted">{{ description }}</p>
+  </div>
+</header>
+
+
+  <main class="container mt-3">
+  <div class="card p-5 mb-3">
+    {{content |safe}}
+</div>
+	</div>
+  </main>
+</div>

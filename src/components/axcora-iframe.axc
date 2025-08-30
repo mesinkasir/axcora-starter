@@ -1,0 +1,7 @@
+<div class="embed-{{ratio}}">
+  <iframe src="{{url}}"
+   title={{title}}
+   loading="lazy" 
+  allowfullscreen>
+  </iframe>
+</div>

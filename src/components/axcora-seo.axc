@@ -1,0 +1,30 @@
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<meta name="author" content="{{ author }}">
+{{ metaGenerator }}
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ url or '' }}">
+{{#if image}}
+<meta property="og:image" content="{{ site.url }}{{ image }}">
+{{else}}
+<meta property="og:image" content="{{ site.url }}{{ site.favicon }}">
+{{/if}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+{{#if image}}
+<meta name="twitter:image" content="{{ site.url }}{{ image }}">
+{{else}}
+<meta name="twitter:image" content="{{ site.url }}{{ site.favicon }}">
+{{/if}}
+{{#if site.social.twitter}}
+<meta name="twitter:site" content="@{{site.social.twitter}}">
+{{/if}}
+{{#if site.favicon}}
+<link rel="icon" href="{{ site.url }}{{ site.favicon }}" type="image/png">
+<link rel="shortcut icon" href="{{ site.url }}{{ site.favicon }}" type="image/png">
+<link rel="apple-touch-icon" href="{{ site.url }}{{ site.favicon }}">
+<link rel="icon" href="{{ site.url }}{{ site.favicon }}" type="image/x-icon">
+{{/if}}

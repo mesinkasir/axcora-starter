@@ -1,0 +1,57 @@
+---
+layouts: base
+css:
+  theme: 'essentials'
+  components:
+    - buttons
+    - navbar
+    - badge
+    - hero
+    - breadcrumb
+    - pagination
+    - cards
+js:
+  - navbar
+  - theme
+---
+<main class="container">
+<div class="card p-3 content-start p-3 mb-3">
+<header class="container text-center">
+{{#if title}}<h1 class="text-3xl"><strong><a href="{{url}}">{{ title }}</a></strong></h1>{{/if}}
+{{#if image}}
+{% axcora-image src="{{image or site.image}}" alt="{{title}}" /%}
+{{/if}}
+<div class="text-start bg-gradient-primary rounded-lg p-5 mb-3"> 
+{{#if description}}<h2 class="mb-3">{{description}}</h2>{{/if}}
+<p><time class="text-small">Publish On : {{ date | formatDate }}</time><p>
+{{#if tagsSlugged.length}}
+<p>
+  {{#each tagsSlugged}}
+    <a href="/tags/{{slug}}/" class="btn btn-info btn-sm me-1 mb-1">#{{name}}</a>
+  {{/each}}
+{{#if category}}
+<a href="/categories/{{ categorySlug }}/" class="btn btn-sm btn-primary">{{ category }}</a>
+{{/if}}
+{{/if}}
+</p>
+</div>
+</header>
+<article class="container">
+{{ content }}
+</article>
+<div class="row p-3">
+      <div class="col-6">
+      {{#if prev}}
+        <p class="text-muted mb-1">Previous Post</p>
+        <a href="{{ prev.url }}" class="btn btn-primary">← {{ prev.title }}</a>
+      {{/if}}
+      </div>
+      
+      <div class="text-right col-6 px-4 py-4 text-end">
+      {{#if next}}
+        <p class="text-muted mb-1">Next Post</p>
+        <a href="{{ next.url }}" class="btn btn-primary">{{ next.title }} →</a>
+      {{/if}}</div>
+</div>
+</div>
+</main>

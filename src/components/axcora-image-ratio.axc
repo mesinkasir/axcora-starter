@@ -1,0 +1,6 @@
+<div class="ratio ratio-{{#if ratio}}{{ratio}}{{else}}16x9{{/if}}">
+<img src="{{image}}" 
+    alt="{{title}}" 
+    {{#if loading}}loading="{{loading}}"{{else}}loading="lazy"{{/if}}
+/>
+</div>

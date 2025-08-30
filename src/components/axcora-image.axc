@@ -1,0 +1,37 @@
+<figure class="axcora-image {{ class }}">
+  <img 
+    src="{{ src }}" 
+    alt="{{ alt }}" 
+    {{#if sizes}}sizes="{{ sizes }}"{{/if}}
+    loading="{{#if eager}}eager{{else}}lazy{{/if}}"
+    decoding="async"
+    class="responsive-image"
+  >
+</figure>
+
+<style>
+.axcora-image { 
+  margin: 1rem 0; 
+  text-align: center; 
+}
+
+.responsive-image { 
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.responsive-image:hover {
+  transform: scale(1.02);
+}
+
+.rounded-lg .responsive-image { 
+  border-radius: 0.5rem; 
+}
+
+.shadow-xl .responsive-image { 
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+</style>

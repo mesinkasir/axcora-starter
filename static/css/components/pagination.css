@@ -1,0 +1,72 @@
+/* ===== PAGINATION MODERN STYLE axcora technology ===== */
+.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: var(--radius-lg);
+  gap: var(--spacing-xs);
+  justify-content: center;
+  align-items: center;
+  margin: var(--spacing-lg) 0;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  color: var(--p500);
+  text-decoration: none;
+  background-color: var(--body-bg);
+  border: 2px solid var(--s200);
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-left: -1px;
+  line-height: 1.25;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+  font-weight: 500;
+  min-width: 44px;
+  text-align: center;
+}
+
+.page-link:hover {
+  z-index: 2;
+  color: var(--p600);
+  text-decoration: none;
+  background-color: var(--p100);
+  border-color: var(--p300);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: white;
+  background: linear-gradient(135deg, var(--p500), var(--p600));
+  border-color: var(--p500);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.page-item.disabled .page-link {
+  color: var(--text-muted);
+  pointer-events: none;
+  background-color: var(--s100);
+  border-color: var(--s200);
+  opacity: 0.6;
+}
+
+[data-theme="dark"] .page-link {
+  background-color: var(--s200);
+  border-color: var(--s600);
+  color: var(--color);
+}
+
+[data-theme="dark"] .page-link:hover {
+  background-color: var(--p800);
+  border-color: var(--p600);
+  color: var(--s800);
+}
+
+[data-theme="dark"] .page-item.disabled .page-link {
+  background-color: var(--s500);
+  border-color: var(--s800);
+  color: var(--color);
+}

@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+:root {
+  /* Base Typography */
+  line-height: 1.8;
+  color-scheme: light dark;
+  font-size: 1.4rem;
+  /* Base Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2.5rem;
+  --spacing-2xl: 4rem;
+
+
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-Index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+    --wt: #fff;
+  --bl: #000;
+}
+
+body {
+  background: var(--body-bg);
+  color: var(--color);
+  min-height: 100vh;
+  font-family: "Jersey 10", sans-serif;
+  transition: background var(--transition-normal), color var(--transition-normal);
+}
+
+/* ===== LIGHT MODE DEFAULT ===== */
+:root {
+  --color: #1e293b;
+  --text-muted: #64748b;
+  --d: #04080F;
+  --l: #A4B4D0;
+  --lf: #e3306c;
+
+    /* Neon Brutalist / Rainbow Gradient */
+  --p50: #fff7f0; /* Creamy */
+  --p100: #d859ff; /* Yellow Neon */
+  --p200: #ff8e2b; /* Orange Neon */
+  --p300: #ff5b99; /* Hot Pink */
+  --p400: #ff65d1; /* Pinky Purple */
+  --p500: #e3306c; /* Violet Neon */
+  --p600: #0d0827; /* Neon Indigo */
+  --p700: #00e0ff; /* Cyan blue */
+  --p800: #12ffb0; /* Neon Green */
+  --p900: #39ff14; /* Toxic Green */
+  
+  --s50: #f7ffe0; /* Light yellow-green */
+  --s100: #e3ff60; /* Light green */
+  --s200: #a8ff00; /* Lime */
+  --s300: #00a023; /* Toxic Green */
+  --s400: #f200ff; /* Mint */
+  --s500: #00fff7; /* Cyan neon */
+  --s600: #14d9ff; /* Bright cyan */
+  --s700: #0076ff; /* Bright blue */
+  --s800: #3829e4; /* Blue Indigo */
+  --s900: #9400ff; /* Purple */
+  
+  --su50: #eafff7; /* Lightest green */
+  --su100: #ad20c6; /* Mint Green */
+  --su200: #28ff75; /* Spring Green */
+  --su300: #0aff32; /* Toxic Light */
+  --su400: #ff0099; /* Neon Mint */
+  --su500: #ff004c; /* Neon Emerald */
+  --su600: #0afc5d; /* Mint Strong */
+  --su700: #c42491; /* Mint-dark */
+  --su800: #1eab69; /* Darker mint */
+  --su900: #0b7a4c; /* Deep green */
+  
+  --d50: #fff0f7;   /* Lightest pink */
+  --d100: #ffb3e6;  /* Pink Soft */
+  --d200: #ff6fcf;  /* Pink Neon */
+  --d300: #ff26ab;  /* Hot Pink */
+  --d400: #ff0043;  /* Acid Red */
+  --d500: #fe1947;  /* Red Neon */
+  --d600: #f70072;  /* Neon Fuchsia */
+  --d700: #c80033;  /* Hard Red */
+  --d800: #960027;  /* Deep Red */
+  --d900: #53000a;  /* Maroon */
+  
+  --i50: #e7f3ff;   /* Ice Blue */
+  --i100: #9ce6ff;  /* Electric Blue */
+  --i200: #54baff;  /* Sky blue */
+  --i300: #389fff;  /* Bright blue */
+  --i400: #205eff;  /* Blue Neon */
+  --i500: #1700ff;  /* Blue Strong */
+  --i600: #430072;  /* Indigo Water */
+  --i700: #53007a;  /* Purple Deep */
+  --i800: #1b0055;  /* Night Indigo */
+  --i900: #0c0016;  /* Space Black */
+  
+  --w50: #fff9e0; /* Lightest yellow */
+  --w100: #ffe258; /* Lemon */
+  --w200: #ffb300; /* Chrome Yellow */
+  --w300: #ff6f00; /* Fire Orange */
+  --w400: #ff3f00; /* Hard Orange */
+  --w500: #ff0080; /* Magenta Neon */
+  --w600: #ff0099; /* Hot Magenta */
+  --w700: #cc0057; /* Magenta darker */
+  --w800: #990025; /* Deep Orange */
+  --w900: #690002; /* Brick */
+
+  
+}
+body {
+  background: linear-gradient(104deg, var(--p300), var(--d200), var(--s100), var(--i300), var(--w400));
+}
+[data-theme="dark"]  body{
+  --body-bg: #11111b; /* Blackish purple */
+  --color: #f7f7f7;
+  --text-muted: #8f97ad;
+}
+
+/* ===== DARK MODE ===== */
+[data-theme="dark"] {
+   --p50: #7c3cff;  /* Neon Purple */
+  --p100: #a21caf; /* Fuschia */
+  --p200: #e11d48; /* Strong pink-red */
+  --p300: #f59e42; /* Acid orange */
+  --p400: #ea364b; /* Brutal yellow */
+  --p500: #ff143f; /* Neon green */
+  --p600: #761148; /* Emerald neon */
+  --p700: #0400ff; /* Neon cyan */
+  --p800: #ff0084; /* Blue neon */
+  --p900: #1700ff; /* Indigo neon */
+  
+  --s50: #282828;   /* Ultra dark */
+  --s100: #505050;
+  --s200: #23232e;
+  --s300: #3a3a4d;
+  --s400: #6a6aec;
+  --s500: #00ffff;  /* Electric cyan */
+  --s600: #0fd9da;
+  --s700: #12fdfe;
+  --s800: #00ccff;  /* Neon blue */
+  --s900: #0097ff;
+
+  --su50: #0e2828;
+  --su100: #16c60c;
+  --su200: #27ff12; /* Neon Green */
+  --su300: #0ae98d;
+  --su400: #37ff83;
+  --su500: #ea02ff;
+  --su600: #63fd4e;
+  --su700: #3ff337;
+  --su800: #2dc84d;
+  --su900: #178c3c;
+
+  --d50: #411926;      /* Deep maroon */
+  --d100: #ff1d5e;     /* Neon red/pink */
+  --d200: #ff006e;     /* Hot magenta */
+  --d300: #fa3700;     /* Hard orange/red */
+  --d400: #fb5607;     /* Hard orange */
+  --d500: #ffbe0b;     /* Neon yellow/orange */
+  --d600: #ff076a;     /* Neon yellow */
+  --d700: #e4f600;     /* Soft yellow-green */
+  --d800: #a5e603;     /* Chartreuse */
+  --d900: #162403;     /* Very dark olive */
+
+  --i50: #0a1224;      /* Night Blue */
+  --i100: #1b48fa;     /* Mid Blue Neon */
+  --i200: #267fff;     /* Electric Blue */
+  --i300: #3300ff;     /* Neon Cyan */
+  --i400: #7800db;     /* High Mint */
+  --i500: #971de9;     /* Neon Green-Blue */
+  --i600: #4a33f9;     /* Minty Green */
+  --i700: #e6ff00;     /* Neon Lime */
+  --i800: #fdff38;     /* Neon Yellow */
+  --i900: #fff3a3;     /* Soft Yellow */
+
+  --w50: #282817;      /* Dark Yellow Green */
+  --w100: #d7ff00;     /* Neon highlighter yellow */
+  --w200: #ffe066;     /* Egg yellow, less intense */
+  --w300: #ffae00;     /* Bold yellow */
+  --w400: #ff4800;     /* Orange Electric */
+  --w500: #ff007a;     /* Hot Pink */
+  --w600: #f72585;     /* Neon Pink */
+  --w700: #660099;     /* Bold Purple */
+  --w800: #3a0ca3;     /* Deep Blue */
+  --w900: #2b2d42;     /* Very Dark Indigo */
+
+  --d: #645a5a;       /* Light for contrast text/elements */
+  --l: #1A1A2E;       /* Main background */
+  --lf: #1A1A2E;       /* Main background */
+}
+
+/* Axcora Brutal */
+nav,.hero,.card,button,.btn,footer,.glass,.card.shadow-sm,img,iframe,.bg-gradient-primary
+{
+border-radius: 0;
+border: solid 3px var(--color);
+box-shadow: 7px 5px 0 0 var(--color) !important;
+}
+.bg-gradient-primary {
+  background: linear-gradient(104deg, var(--p300), var(--d200), var(--s100));
+}
+[data-theme="dark"] h1,h2,h3,h4,h5,h6 {
+  text-shadow: 2px 0 5px rgb(231, 208, 211);
+}
+[data-theme="dark"] .bg-gradient-primary {
+  background: linear-gradient(146deg, var(--p200), var(--s600), var(--d400), var(--w600));
+  color: var(--l);
+}
+.breadcrumb-item.active {color: var(--color);}
+.content-start{margin-top:100px;}
+a { color: var(--p500); }
+a:hover { color: var(--p600); }
+footer a { color: var(--wt); text-decoration: none;}
+footer ul {  list-style: none; }
+p ,ul ,ol { margin-bottom: 1.1em; }
+.text-small {font-size: 12px;}
+.full {width:100%;}
+a.btn:hover {color:white;}
+footer.bg-primary { background-color: var(--w900);}
+[data-theme="dark"] nav,footer.bg-primary {background-color: var(--lf);}
+

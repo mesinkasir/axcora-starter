@@ -1,0 +1,60 @@
+/*!
+ * Axcora Cards Modern
+ * Contemporary card design with advanced layouts and accessibility
+ */
+/* ===== CARD ===== */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: var(--s50);
+  background-clip: border-box;
+  border: 1px solid var(--s200);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all var(--transition-normal);
+  color: var(--color);
+}
+
+.card-header {
+  padding: var(--spacing-lg);
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--s200);
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--p500), var(--p600));
+  color: white;
+  font-weight: 600;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: var(--spacing-lg);
+  color: var(--color);
+}
+
+.card-footer {
+  padding: var(--spacing-lg);
+  border-top: 1px solid var(--s200);
+  background-color: var(--s100);
+  border-bottom-left-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-lg);
+  color: var(--color);
+}
+
+[data-theme="dark"] .card {
+  background-color: var(--s200);
+  border-color: var(--s600);
+}
+
+[data-theme="dark"] .card-header {
+  background: linear-gradient(135deg, var(--p500), var(--p400));
+  border-color: var(--s600);
+}
+
+[data-theme="dark"] .card-footer {
+  background-color: var(--s300);
+  border-color: var(--s600);
+}

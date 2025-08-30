@@ -1,0 +1,5 @@
+<button class="btn btn-{{color}}" 
+onclick="Framework.showToast('{{text}}', '{{#if color}}{{color}}{{/if}}')">
+{{button}}
+</button>
+<div class="toast-container"></div>

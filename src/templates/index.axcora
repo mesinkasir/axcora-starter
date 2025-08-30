@@ -1,0 +1,114 @@
+---
+layouts: base
+css:
+  theme: 'essentials'
+  components:
+    - buttons
+    - cards
+    - navbar
+    - badge
+    - glass
+    - forms
+    - badge
+    - search
+    - hero
+js:
+  - navbar
+  - theme
+  - search
+---
+<header class="hero mt-5 container">
+  <div class="container">
+    <div class="text-center">
+      <div class="py-6">
+        <span class="badge glass p-3 mb-3">
+          {{hero.version}}
+        </span>
+      </div>      
+      <h1 class="display-1 fw-bold mb-3 mt-3 text-white">
+        {{hero.title1}}
+        <span class="text-warning d-block">{{hero.title2}}</span>
+      </h1>      
+      <p class="py-4 text-white">
+        {{hero.description}}
+      </p>      
+      <div class="dflex gap-3 py-4">
+        <a href="{{hero.button1.url}}" class="btn btn-dark btn-lg">
+          {{hero.button1.text}}
+        </a>
+        <a href="{{hero.button2.url}}" class="btn btn-warning btn-lg">
+          {{hero.button2.text}}
+        </a>
+      </div>
+      <div class="row p-3">
+        {{#each hero.info}}
+        <div class="col-3 p-3">
+		<div class="glass p-3">
+          <div>{{title}}</div>
+          <div>{{text}}</div>
+        </div>
+        </div>{{/each}}
+      </div>
+    </div>
+  </div>
+</header>
+
+{{#if site.search.enabled}}<div class="container p-5">
+      <div class="search-container">
+        <div class="search-input-wrapper">
+          <input 
+            type="text" 
+            id="searchBox" 
+            placeholder="🔍 Search posts..." 
+            class="form-control"
+          >
+        </div>
+        <div id="searchResults" class="search-results"></div>
+      </div>
+</div>{{/if}}
+
+
+{{#if site.show_blog_list}}
+<div class="container">
+<div class="row">
+{{#if posts.length}}
+<section>
+  <h2 class="col-md-12 p-3">Latest Posts</h2>
+  
+  <div class="row">
+    {{#each posts}}
+    <article class="col-6 p-3">
+    <div class="card shadow-sm">
+      <h3 class="card-header">
+        <a href="{{ url }}" class="text-white text-decoration-none">{{ title }}</a>
+      </h3>
+      
+      <div class="card-body">
+         {{#if image}}
+	     <a href="{{ url }}" title="{{description}}">
+		{% axcora-image-fluid image="{{image}}" alt="{{title}}" /%}
+		</a>
+	  {{/if}}
+        <span class="text-small">{{ date | formatDate }}</span>
+        {{#if category}}
+        <span class="ms-3"><a href="categories/{{ category_slug }}/" 
+        class="btn btn-info btn-sm">{{ category }}</a></span>
+        {{/if}}
+      
+      <p>{{ excerpt or "Read more..." }}</p>
+      
+      <p class="mt-3"><a href="{{ url }}" class="btn btn-primary">Read More →</a></p>
+      </div>
+      </div>
+    </article>
+    {{/each}}
+  </div>
+  
+  <div class="text-center mt-3 p-3 mb-5">
+    <a href="/blog/" class="btn btn-primary">View All Posts →</a>
+  </div>
+</section>
+{{/if}}
+</div>
+</div>
+{{/if}}

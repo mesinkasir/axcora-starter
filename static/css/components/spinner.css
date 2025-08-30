@@ -1,0 +1,67 @@
+/*!
+ * Axcora Spinners Enhanced
+ * Modern loading indicators with smooth animations and accessibility features
+ */
+/* ===== SPINNER MODERN STYLE ===== */
+.spinner {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-full);
+  animation: spin 1s linear infinite;
+}
+
+.spinner-border {
+  border: 0.25em solid var(--s200);
+  border-right-color: transparent;
+}
+
+.spinner-primary {
+  border-color: var(--p200);
+  border-right-color: var(--p500);
+}
+
+.spinner-success {
+  border-color: var(--su200);
+  border-right-color: var(--su500);
+}
+
+.spinner-danger {
+  border-color: var(--d200);
+  border-right-color: var(--d500);
+}
+
+.spinner-grow {
+  background-color: var(--p500);
+  animation: spinner-grow 0.75s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-grow {
+  0%,
+  80% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.spinner-sm {
+  width: 1rem;
+  height: 1rem;
+  border-width: 0.15em;
+}
+
+.spinner-lg {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.35em;
+}

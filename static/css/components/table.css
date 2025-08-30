@@ -1,0 +1,85 @@
+/*!
+ * Axcora Tables Enhanced
+ * Modern table component with responsive design and accessibility features
+ */
+/* ===== TABLE RESPONSIVE ===== */
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius-md);
+}
+.table {
+  width: 100%;
+  margin-bottom: var(--spacing-md);
+  background-color: transparent;
+  border-collapse: collapse;
+  color: var(--color);
+}
+
+.table th,
+.table td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  vertical-align: top;
+  border-top: 1px solid var(--s200);
+  transition: background-color var(--transition-normal);
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid var(--s300);
+  font-weight: 600;
+  color: var(--s900);
+  background-color: var(--s50);
+}
+
+.table tbody tr:hover {
+  background-color: var(--s50);
+}
+
+[data-theme="dark"] .table {
+  color: var(--s50);
+}
+
+[data-theme="dark"] .table th,
+[data-theme="dark"] .table td {
+  border-color: var(--s700);
+  color: var(--s900);
+}
+
+[data-theme="dark"] .table thead th {
+  background-color: var(--s800);
+  color: var(--s50);
+  border-color: var(--s600);
+}
+
+[data-theme="dark"] .table tbody tr:hover {
+  background-color: var(--s400);
+  color: var(--s900);
+}
+
+/* Table Variants */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: var(--s50);
+}
+
+[data-theme="dark"] .table-striped tbody tr:nth-of-type(odd) {
+  background-color: var(--s100);
+  color: var(--s900);
+}
+
+.table-bordered {
+  border: 1px solid var(--s200);
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid var(--s200);
+}
+
+[data-theme="dark"] .table-bordered,
+[data-theme="dark"] .table-bordered th,
+[data-theme="dark"] .table-bordered td {
+  border-color: var(--s700);
+}

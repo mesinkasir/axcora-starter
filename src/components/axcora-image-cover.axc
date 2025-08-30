@@ -1,0 +1,6 @@
+<img src="{{image}}" 
+    alt="{{title}}" 
+    class="img-cover {{#if rounded}}{{rounded}}{{/if}}"
+    {{#if width}}width="{{width}}"{{else}}width="100%"{{/if}}
+    {{#if loading}}loading="{{loading}}"{{else}}loading="lazy"{{/if}}
+/>

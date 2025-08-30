@@ -1,0 +1,214 @@
+/*!
+ * Axcora Buttons Modern
+ * Beautiful, accessible, and performant button system
+ */
+
+/* ==========================================================================
+   BUTTON FOUNDATION
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: all var(--transition-normal);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 0.875rem;
+}
+
+/* ===== SOLID BUTTONS WITH HOVER STATES ===== */
+.btn-primary {
+  background-color: var(--p500);
+  color: white;
+}
+
+.btn-dark {
+  background-color: var(--d);
+  color: inherit;
+}
+.btn-light {
+  background-color: var(--l);
+  color: inherit;
+}
+
+.btn-primary:hover {
+  background-color: var(--p600);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: var(--s500);
+  color: white;
+}
+.btn-secondary:hover {
+  background-color: var(--s600);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-success {
+  background-color: var(--su500);
+  color: white;
+}
+.btn-success:hover {
+  background-color: var(--su600);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-danger {
+  background-color: var(--d500);
+  color: white;
+}
+.btn-danger:hover {
+  background-color: var(--d600);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-info {
+  background-color: var(--i500);
+  color: white;
+}
+.btn-info:hover {
+  background-color: var(--i600);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-warning {
+  background-color: var(--w500);
+  color: white;
+}
+.btn-warning:hover {
+  background-color: var(--w600);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== FIXED: BUTTON OUTLINE TRANSPARENT ===== */
+.btn-outline,
+.btn-outline-primary,
+.btn-outline-secondary,
+.btn-outline-success,
+.btn-outline-danger,
+.btn-outline-info,
+.btn-outline-warning {
+  background-color: inherit;
+  border: 2px solid currentColor;
+}
+
+.btn-outline-primary {
+  color: var(--p500);
+  border-color: var(--p300);
+}
+.btn-outline-primary:hover {
+  background-color: var(--p500);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline-secondary {
+  color: var(--s700);
+  border-color: var(--s500);
+}
+.btn-outline-secondary:hover {
+  background-color: var(--s500);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline-success {
+  color: var(--su700);
+  border-color: var(--su700);
+}
+.btn-outline-success:hover {
+  background-color: var(--su700);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline-danger {
+  color: var(--d700);
+  border-color: var(--d700);
+}
+.btn-outline-danger:hover {
+  background-color: var(--d700);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline-info {
+  color: var(--i700);
+  border-color: var(--i700);
+}
+.btn-outline-info:hover {
+  background-color: var(--i500);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline-warning {
+  color: var(--w700);
+  border-color: var(--w600);
+}
+.btn-outline-warning:hover {
+  background-color: var(--w500);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== GHOST BUTTONS WITH HOVER STATES ===== */
+.btn-ghost {
+  background: none;
+  border: none;
+  color: var(--color);
+}
+.btn-ghost:hover {
+  background-color: var(--s100);
+  color: var(--s700);
+}
+[data-theme="dark"] 
+.btn-ghost:hover {
+  background-color: var(--s700);
+  color: var(--s100);
+}
+
+/* ===== BUTTON SIZES ===== */
+.btn-sm {
+  padding: calc(var(--spacing-xs) * 0.8) var(--spacing-sm);
+  font-size: 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn-lg {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: 1.125rem;
+  border-radius: var(--radius-lg);
+}
+
+.btn-xl {
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: 1.25rem;
+  border-radius: var(--radius-xl);
+}
+
+/* Responsive Button Stacking */
+@media (max-width: 767px) {
+  .btn-block {
+    display: block;
+    width: 100%;
+  }
+}

@@ -1,0 +1,8 @@
+<div class="card">
+    <div class="card-header">{{title}}</div>
+    <div class="card-body">
+        <h5>{{card_title}}</h5>
+        <p>{{text}}</p>
+    </div>
+    <div class="card-footer">{{footer}}</div>
+</div>

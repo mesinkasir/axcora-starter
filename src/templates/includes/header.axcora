@@ -1,0 +1,17 @@
+<nav class="navbar fixed-top mb-5 container rounded-xl mt-1 opacity-85">
+  <a class="navbar-brand" href="{{site.url}}"> {{#if site.logo}}
+            <img src="{{ site.logo }}" width="40" height="40" class="img-fluid" alt="{{ site.title }}">
+            {{else}}
+			{{ site.title }}
+          {{/if}}</a>
+  <button class="navbar-toggler" onclick="document.querySelector('.navbar-collapse').classList.toggle('show')">☰</button>
+  <div class="navbar-collapse">
+    <ul class="navbar-nav">
+      {{#each site.navbar}}<li class="nav-item"><a class="nav-link" 
+      href="{{url}}">{{title}}</a></li>{{/each}}
+    </ul>
+    {{#if site.theme.enable_dark_mode}}<button id="themeToggle" class="btn btn-outline ms-3">
+    🌙 Dark
+    </button>{{/if}}
+  </div>
+</nav>

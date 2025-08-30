@@ -1,0 +1,107 @@
+/*!
+ * Axcora Badge Enhanced
+ * Modern badge component with variants and positioning features
+ */
+
+/* ==========================================================================
+   BADGE FOUNDATION
+   ========================================================================== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: calc(var(--spacing-sm) * 0.85) var(--spacing-md);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: var(--radius-xl);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.badge-primary {
+  background-color: var(--p500);
+  color: white;
+}
+
+.badge-secondary {
+  background-color: var(--s500);
+  color: white;
+}
+
+.badge-success {
+  background-color: var(--su500);
+  color: white;
+}
+
+.badge-danger {
+  background-color: var(--d500);
+  color: white;
+}
+
+.badge-info {
+  background-color: var(--i500);
+  color: white;
+}
+
+.badge-warning {
+  background-color: var(--w500);
+  color: var(--s900);
+}
+
+.badge-light {
+  background-color: var(--s100);
+  color: var(--s700);
+}
+
+.badge-dark {
+  background-color: var(--s800);
+  color: var(--s100);
+}
+
+/* Badge Outline Variants */
+.badge-outline-primary {
+  background-color: transparent;
+  color: var(--p600);
+  border: 1px solid var(--p600);
+}
+
+.badge-outline-secondary {
+  background-color: transparent;
+  color: var(--s500);
+  border: 1px solid var(--s500);
+}
+
+.badge-outline-success {
+  background-color: transparent;
+  color: var(--su600);
+  border: 1px solid var(--su600);
+}
+
+.badge-outline-danger {
+  background-color: transparent;
+  color: var(--d600);
+  border: 1px solid var(--d600);
+}
+
+.badge-outline-info {
+  background-color: transparent;
+  color: var(--i600);
+  border: 1px solid var(--i600);
+}
+
+.badge-outline-warning {
+  background-color: transparent;
+  color: var(--w600);
+  border: 1px solid var(--w600);
+}
+
+/* Badge Sizes */
+.badge-sm {
+  padding: calc(var(--spacing-xs) * 0.25) calc(var(--spacing-xs) * 0.75);
+  font-size: 0.625rem;
+}
+
+.badge-lg {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 0.875rem;
+}

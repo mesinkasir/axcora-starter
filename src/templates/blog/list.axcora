@@ -1,0 +1,78 @@
+---
+layouts: base
+css:
+  theme: 'essentials'
+  components:
+    - buttons
+    - navbar
+    - badge
+    - hero
+    - breadcrumb
+    - pagination
+    - cards
+js:
+  - navbar
+  - theme
+---
+
+<header class="hero container content-start mb-3">
+  <div class="hero-content">
+    <h1>{{title}}</h1>
+    <p>{{description}}po</p>
+  </div>
+</header>
+
+<main class="container">
+
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-modern p-3">
+        <li class="breadcrumb-item"><a href="{{site.url}}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+    </ol>
+</nav>
+  <article class="row mt-3">
+  {{#each posts}}
+	<div class="col-6 p-2">
+	<div class="card p-3">  
+	        {{#if category}}
+        <a href="/categories/{{ category | slugify }}/"><span class="badge badge-success badge-sm p-2 text-small float-end">
+		{{ category }}
+		</span></a>
+     {{/if}}
+	  {{#if image}}
+	     <a href="{{ url }}" title="{{description}}">
+		{% axcora-image src="{{image or site.image}}" alt="{{title}}" /%}
+		</a>
+	  {{/if}}
+    {{#if date}}
+      <time class="meta-item text-small">{{ date | formatDate }}</time>
+	  {{/if}}
+	<h2 class="display-4">
+      <strong><a href="{{ url }}" class="text-decoration-none">{{ title }}</a></strong>
+    </h2>	 
+{{#if tags.length}}
+<div class="d-flex mt-1 mb-2">{{ tags | joinTags }}</div>
+{{/if}}
+	 <p>{{ description }}</p>
+    <div class="mt-3">
+      <a href="{{ url }}" class="btn btn-primary full">Read {{title}} →</a>
+    </div>
+	</div>
+	</div>
+  {{/each}}
+    </article>
+
+<ul class="pagination">
+  {{#if pagination.hasPrev}} <li class="page-item">
+    <a class="btn btn-primary" href="{{ pagination.prevLink }}" tabindex="-1">Previous</a>
+  </li>{{/if}}
+
+    <li class="page-item">
+        <span class="p-2">Page {{pagination.currentPage}} of {{pagination.totalPages}}</span>
+    </li>
+    {{#if pagination.hasNext}}<li class="page-item">
+        <a class="btn btn-primary" href="{{ pagination.nextLink }}">Next</a>
+    </li>{{/if}}
+</ul>
+
+</main>

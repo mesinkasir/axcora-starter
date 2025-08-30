@@ -1,0 +1,4 @@
+<a href="{{url}}" 
+class="btn btn-{{color}}">
+{{text}}
+</a>

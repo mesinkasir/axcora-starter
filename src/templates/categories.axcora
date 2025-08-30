@@ -1,0 +1,45 @@
+---
+layouts: base
+css:
+  theme: 'essentials'
+  components:
+    - buttons
+    - navbar
+    - badge
+    - hero
+    - breadcrumb
+    - cards
+js:
+  - navbar
+  - theme
+---
+<header class="hero container content-start mb-3">
+  <div class="hero-content">
+    <h1>
+	  <a href="{{url}}" class="text-white text-decoration-none">{{ title }}</a>
+    </h1>
+    <p class="lead text-muted">{{ description }}</p>
+  </div>
+</header>
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-modern p-3">
+        <li class="breadcrumb-item"><a href="{{site.url}}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Categories</li>
+    </ol>
+</nav>
+</div>
+  <main class="container mt-3">
+  <div class="card p-5 mb-3">
+    {{content |safe}}
+    <div class="row">
+{{#each collections.uniqueCategories}}
+<div class="col-md-3 col-lg-2 col-6 p-2">
+  <a href="/categories/{{slug}}/" 
+  class="btn btn-sm btn-outline-primary full">{{name}}</a>
+</div>{{/each}}
+</div>
+	</div>
+  </main>
+</div>

@@ -1,0 +1,7 @@
+<img src="{{image}}" 
+    alt="{{title}}" 
+    class="img-thumbnail"
+    {{#if width}}width="{{width}}"{{else}}width="40"{{/if}}
+    {{#if height}}height="{{height}}"{{else}}height="40"{{/if}}
+    {{#if loading}}loading="{{loading}}"{{else}}loading="lazy"{{/if}}
+/>

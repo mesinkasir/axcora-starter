@@ -1,0 +1,126 @@
+/*!
+ * Axcora Forms Enhanced
+ * Modern form components with accessibility and responsive design
+  */
+
+/* ===== FORM CONTROLS WITH FLOATING LABELS ===== */
+.form-floating {
+  position: relative;
+}
+
+.form-control,
+.form-select {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-sm);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color);
+  background-color: var(--body-bg);
+  background-clip: padding-box;
+  border: 2px solid var(--s300);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.form-control:focus,
+.form-select:focus {
+  color: var(--color);
+  background-color: var(--body-bg);
+  border-color: var(--p500);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(92, 37, 167, 0.25);
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+  box-shadow: 0 0 0 0.25rem rgba(216, 36, 225, 0.25);
+}
+
+/* Floating Labels */
+.form-floating > .form-control,
+.form-floating > .form-select {
+  height: calc(3.5rem + 2px);
+  padding: 1rem 0.55rem;
+}
+
+.form-floating > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1rem 0.75rem;
+  pointer-events: none;
+  border: 2px solid transparent;
+  transform-origin: 0 0;
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+  color: var(--s500);
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+  opacity: 0.65;
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
+.form-floating > .form-control:focus ~ label {
+  color: var(--p500);
+}
+
+/* Form Validation States */
+.form-control.is-valid {
+  border-color: var(--su500);
+}
+
+.form-control.is-valid:focus {
+  border-color: var(--su500);
+  box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.25);
+}
+
+.form-control.is-invalid {
+  border-color: var(--d500);
+}
+
+.form-control.is-invalid:focus {
+  border-color: var(--d500);
+  box-shadow: 0 0 0 0.25rem rgba(239, 68, 68, 0.25);
+}
+
+/* Input Group */
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+.input-group > .form-control {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+}
+
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--s600);
+  text-align: center;
+  white-space: nowrap;
+  background-color: var(--p200);
+  border: 2px solid var(--s300);
+  border-radius: var(--radius-md);
+}
+
+[data-theme="dark"] .input-group-text {
+  color: var(--color);
+  background-color: var(--s200);
+  border-color: var(--s600);
+}

@@ -1,0 +1,49 @@
+# Site Information
+title: "Axcora Framework"
+description: "Modern static site generator with built-in CSS framework"
+url: "http://localhost:3000"
+author: "Axcora Team"
+image: "/img/logo.jpg"
+logo: "/img/logo.jpg"
+favicon: "/img/logo.jpg"
+blog:
+  posts_per_page: 6
+  show_excerpts: true
+
+# Navigation Menu
+navbar:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about/"
+  - title: "Blog" 
+    url: "/blog/"
+  - title: "Tags" 
+    url: "/tags/"
+  - title: "Categories" 
+    url: "/categories/"
+  - title: "Github" 
+    url: "https://github.com/sponsors/mesinkasir/"
+  - title: "Support"
+    url: "https://ssg.axcora.com/support/"
+
+# Social Media
+social:
+ - name: Github Sponsor
+   url: "https://github.com/sponsors/mesinkasir"
+ - name: Via Gumroad
+   url: "https://creativitaz.gumroad.com/coffee"
+ - name: Via Paypal
+   url: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JVZVXBC4N9DAN"
+ - name: Via Midtrans
+   url: "https://app.midtrans.com/payment-links/1647457988722"
+
+# Theme settings
+show_blog_list: true
+search:
+  enabled: false
+theme:
+  enable_dark_mode: true
+  default_theme: "light"
+dark_light:
+  enabled: true

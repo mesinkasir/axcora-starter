@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root {
+  /* Base Typography */
+font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color-scheme: light dark;
+
+  /* Base Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 5rem;
+
+
+  /* Transitions */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-normal: 0.35s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+
+  /* Z-Index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+
+  /* Warna Dasar */
+  --wt: #ffffff;
+  --bl: #000000;
+}
+
+body {
+  background: var(--body-bg);
+font-family: "Inter", sans-serif;
+  color: var(--color);
+  font-size: 1rem;
+  min-height: 100vh;
+  transition: background var(--transition-normal), color var(--transition-normal);
+  line-height: 1.7;
+}
+
+/* ===== LIGHT MODE DEFAULT ===== */
+:root {
+  --body-bg: #f9f9f9;
+  --color: #343a40;
+  --text-muted: #6c757d;
+  --d: #04080F;
+  --l: #A4B4D0;
+
+  /* Primary (Corporate Blue) */
+  --p50: #e3f2fd;
+  --p100: #bbdefb;
+  --p200: #90caf9;
+  --p300: #64b5f6;
+  --p400: #42a5f5;
+  --p500: #1976d2;
+  --p600: #1565c0;
+  --p700: #0d47a1;
+  --p800: #0a3981;
+  --p900: #072a61;
+
+  /* Secondary (Gray) */
+  --s50: #f8f9fa;
+  --s100: #f1f3f5;
+  --s200: #e9ecef;
+  --s300: #dee2e6;
+  --s400: #ced4da;
+  --s500: #adb5bd;
+  --s600: #868e96;
+  --s700: #495057;
+  --s800: #343a40;
+  --s900: #212529;
+
+  /* Success (Green) */
+  --su50: #e8f5e9;
+  --su100: #c8e6c9;
+  --su200: #a5d6a7;
+  --su300: #81c784;
+  --su400: #66bb6a;
+  --su500: #43a047;
+  --su600: #388e3c;
+  --su700: #2e7d32;
+  --su800: #276c2b;
+  --su900: #1b5e20;
+
+  /* Danger (Red) */
+  --d50: #ffebee;
+  --d100: #ffcdd2;
+  --d200: #ef9a9a;
+  --d300: #e57373;
+  --d400: #ef5350;
+  --d500: #f44336;
+  --d600: #e53935;
+  --d700: #d32f2f;
+  --d800: #c62828;
+  --d900: #b71c1c;
+
+  /* Info (Light Blue) */
+  --i50: #e1f5fe;
+  --i100: #b3e5fc;
+  --i200: #81d4fa;
+  --i300: #4fc3f7;
+  --i400: #29b6f6;
+  --i500: #03a9f4;
+  --i600: #039be5;
+  --i700: #0288d1;
+  --i800: #0277bd;
+  --i900: #01579b;
+
+  /* Warning (Amber) */
+  --w50: #fff8e1;
+  --w100: #ffecb3;
+  --w200: #ffe082;
+  --w300: #ffd54f;
+  --w400: #ffca28;
+  --w500: #ffc107;
+  --w600: #ffb300;
+  --w700: #ffa000;
+  --w800: #ff8f00;
+  --w900: #ff6f00;
+}
+
+/* ===== DARK MODE ===== */
+[data-theme="dark"] {
+  --body-bg: #212529;
+  --color: #e9ecef;
+  --text-muted: #adb5bd;
+
+  /* Primary (Dark Blue) */
+  --p50: #072a61;
+  --p100: #0a3981;
+  --p200: #0d47a1;
+  --p300: #1565c0;
+  --p400: #1976d2;
+  --p500: #42a5f5;
+  --p600: #64b5f6;
+  --p700: #90caf9;
+  --p800: #bbdefb;
+  --p900: #e3f2fd;
+
+  /* Secondary (Light Gray) */
+  --s50: #212529;
+  --s100: #343a40;
+  --s200: #495057;
+  --s300: #6c757d;
+  --s400: #868e96;
+  --s500: #adb5bd;
+  --s600: #ced4da;
+  --s700: #dee2e6;
+  --s800: #e9ecef;
+  --s900: #f1f3f5;
+
+  /* Success (Dark Green) */
+  --su50: #1b5e20;
+  --su100: #276c2b;
+  --su200: #2e7d32;
+  --su300: #388e3c;
+  --su400: #43a047;
+  --su500: #66bb6a;
+  --su600: #81c784;
+  --su700: #a5d6a7;
+  --su800: #c8e6c9;
+  --su900: #e8f5e9;
+
+  /* Danger (Dark Red) */
+  --d50: #b71c1c;
+  --d100: #c62828;
+  --d200: #d32f2f;
+  --d300: #e53935;
+  --d400: #f44336;
+  --d500: #ef5350;
+  --d600: #e57373;
+  --d700: #ef9a9a;
+  --d800: #ffcdd2;
+  --d900: #ffebee;
+
+  /* Info (Dark Blue) */
+  --i50: #01579b;
+  --i100: #0277bd;
+  --i200: #0288d1;
+  --i300: #039be5;
+  --i400: #03a9f4;
+  --i500: #29b6f6;
+  --i600: #4fc3f7;
+  --i700: #81d4fa;
+  --i800: #b3e5fc;
+  --i900: #e1f5fe;
+
+  /* Warning (Dark Amber) */
+  --w50: #ff6f00;
+  --w100: #ff8f00;
+  --w200: #ffa000;
+  --w300: #ffb300;
+  --w400: #ffc107;
+  --w500: #ffca28;
+  --w600: #ffd54f;
+  --w700: #ffe082;
+  --w800: #ffecb3;
+  --w900: #fff8e1;
+
+  --d: #BABAC6;
+  --l: #1A202A;
+}
+
+/* Axcora Essentials */
+.content-start {
+  margin-top: 80px;
+}
+
+a {
+  color: var(--p500);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--p600);
+}
+
+footer a {
+  color: var(--wt);
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+p,
+ul,
+ol {
+  margin-bottom: 1.5em;
+}
+
+.text-small {
+  font-size: 0.875rem;
+}
+
+.full {
+  width: 100%;
+}
+
+a.btn:hover {
+  color: white;
+}
+.text-white {color:inherit;}
+footer p {color: white;}
+footer h3,footer h4 {color: white;}

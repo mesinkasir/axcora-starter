@@ -1,0 +1,225 @@
+:root {
+  /* Base Typography */
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+ --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  line-height: 1.5;
+  color-scheme: light dark;
+
+  /* Base Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2.5rem;
+  --spacing-2xl: 4rem;
+
+  /* Border Radius - Konsisten untuk semua komponen */
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-Index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+    --wt: #fff;
+  --bl: #000;
+}
+
+body {
+  background: var(--body-bg);
+  color: var(--color);
+  font-size: 0.9rem;
+  min-height: 100vh;
+  transition: background var(--transition-normal), color var(--transition-normal);
+}
+
+/* ===== LIGHT MODE DEFAULT ===== */
+:root {
+  --body-bg: #CACAEF;
+  --color: #1e293b;
+  --text-muted: #64748b;
+  --d: #04080F;
+  --l: #A4B4D0;
+  
+  /* Primary (Purple) */
+  --p50: #f5f1fe;
+  --p100: #ebe3fd;
+  --p200: #d6c6fb;
+  --p300: #bf9df9;
+  --p400: #a874f6;
+  --p500: #5C25A7;
+  --p600: #4a1e86;
+  --p700: #3a1869;
+  --p800: #2d1250;
+  --p900: #220e3c;
+  
+  /* Secondary (Blue-Gray) */
+  --s50: #f0f4f8;
+  --s100: #e2e8f0;
+  --s200: #cbd5e1;
+  --s300: #94a3b8;
+  --s400: #64748b;
+  --s500: #475569;
+  --s600: #334155;
+  --s700: #1e293b;
+  --s800: #162136;
+  --s900: #0f172a;
+  
+  /* Success (Emerald) */
+  --su50: #f0fdfa;
+  --su100: #ccfbf1;
+  --su200: #99f6e4;
+  --su300: #5eead4;
+  --su400: #2dd4bf;
+  --su500: #10b981;
+  --su600: #0d9488;
+  --su700: #0b695c;
+  --su800: #0a4d46;
+  --su900: #083a36;
+  
+  /* Danger (Red) */
+  --d50: #fff5f5;
+  --d100: #fed7d7;
+  --d200: #fecaca;
+  --d300: #fca5a5;
+  --d400: #f87171;
+  --d500: #ef4444;
+  --d600: #dc2626;
+  --d700: #b91c1c;
+  --d800: #991b1b;
+  --d900: #7f1d1d;
+  
+  /* Info (Blue) */
+  --i50: #f0f9ff;
+  --i100: #e0f2fe;
+  --i200: #bae6fd;
+  --i300: #7dd3fc;
+  --i400: #38bdf8;
+  --i500: #0ea5e9;
+  --i600: #0284c7;
+  --i700: #0369a1;
+  --i800: #075985;
+  --i900: #0c4a6e;
+
+  /* Warning (Amber) */
+  --w50: #fffbeb;
+  --w100: #fef3c7;
+  --w200: #fde68a;
+  --w300: #fcd34d;
+  --w400: #fbbf24;
+  --w500: #f59e0b;
+  --w600: #d97706;
+  --w700: #b45309;
+  --w800: #92400e;
+  --w900: #78350f;
+  
+}
+
+/* ===== DARK MODE ===== */
+[data-theme="dark"] {
+  --body-bg: #051937;
+  --color: #DBE1EB;
+  --text-muted: #94a3b8;
+  
+  /* Primary (Purple) */
+  --p50: #321245;
+  --p100: #471b5e;
+  --p200: #5c2477;
+  --p300: #7b359a;
+  --p400: #b059d0;
+  --p500: #D824E1;
+  --p600: #d01dc5;
+  --p700: #b519ae;
+  --p800: #981594;
+  --p900: #7c117a;
+  
+  /* Secondary (Blue-Gray) */
+  --s50: #112a51;
+  --s100: #1a3c6d;
+  --s200: #254d8a;
+  --s300: #305ea7;
+  --s400: #4272b7;
+  --s500: #5b8acc;
+  --s600: #7ca3d9;
+  --s700: #9cbbe6;
+  --s800: #bbc7f0;
+  --s900: #d9e1f9;
+  
+  /* Success (Emerald) */
+  --su50: #032313;
+  --su100: #05361d;
+  --su200: #074a27;
+  --su300: #0b6937;
+  --su400: #0e8746;
+  --su500: #11a555;
+  --su600: #1cb26c;
+  --su700: #26c083;
+  --su800: #30cea9;
+  --su900: #39dbbf;
+  
+  /* Danger (Red) */
+  --d50: #3d1417;
+  --d100: #591e1f;
+  --d200: #752928;
+  --d300: #9c3a37;
+  --d400: #c24a45;
+  --d500: #e85b53;
+  --d600: #ed756b;
+  --d700: #f18f84;
+  --d800: #f6a99d;
+  --d900: #fac3b6;
+  
+  /* Info (Blue) */
+  --i50: #091e32;
+  --i100: #0e2a45;
+  --i200: #133759;
+  --i300: #194973;
+  --i400: #205b8d;
+  --i500: #276da7;
+  --i600: #3d81b2;
+  --i700: #5395bd;
+  --i800: #69a9c8;
+  --i900: #7fbed4;
+
+  /* Warning (Amber) */
+  --w50: #2d1b0f;
+  --w100: #422a15;
+  --w200: #57381b;
+  --w300: #744b26;
+  --w400: #915e31;
+  --w500: #ae713c;
+  --w600: #c28547;
+  --w700: #d69952;
+  --w800: #eaad5d;
+  --w900: #fec168;
+  
+  --d: #BABAC6;
+  --l: #1A202A;
+}
+
+/* Axcora Essentials */
+.content-start{margin-top:80px;}
+a { color: var(--p500); }
+a:hover { color: var(--p600); }
+footer a { color: var(--wt); text-decoration: none;}
+footer ul {  list-style: none; }
+p ,ul ,ol { margin-bottom: 1.1em; }
+.text-small {font-size: 12px;}
+.full {width:100%;}
+a.btn:hover {color:white;}
+
+

@@ -1,0 +1,81 @@
+{
+  "name": "axcora-ssg-starter",
+  "version": "1.0.1-zeus",
+  "description": "Starter template for Axcora Static Site Generator including default config, templates, and sample content.",
+  "keywords": [
+    "axcora",
+    "ssg",
+    "static-site-generator",
+    "starter",
+    "template",
+    "markdown",
+    "blog"
+  ],
+  "author": "Axcora Team <axcora@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/axcora/axcorassg"
+  },
+  "files": [
+    "src/",
+    "content/",
+    "static/",
+    "README.md",
+    "axcora.config.ts",
+    "netlify.toml",
+    "vercel.json",
+    "tsconfig.json",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "axcora": "^1.0.1-zeus",
+    "axcora-accordion": "^1.0.0",
+    "axcora-badge": "^1.0.0",
+    "axcora-blockquote": "^1.0.0",
+    "axcora-button": "^1.0.0",
+    "axcora-card": "^1.0.0",
+    "axcora-carousel": "^1.0.0",
+    "axcora-css": "^1.0.0",
+    "axcora-glass": "^1.0.0",
+    "axcora-hero": "^1.0.0",
+    "axcora-hero-button": "^1.0.0",
+    "axcora-iframe": "^1.0.0",
+    "axcora-image": "^1.0.0",
+    "axcora-image-cover": "^1.0.0",
+    "axcora-image-fluid": "^1.0.0",
+    "axcora-image-ratio": "^1.0.0",
+    "axcora-image-thumbnail": "^1.0.0",
+    "axcora-js": "^1.0.0",
+    "axcora-modal": "^1.0.0",
+    "axcora-scrollspy": "^1.0.0",
+    "axcora-search": "^1.0.0",
+    "axcora-seo": "^1.0.0",
+    "axcora-tabs": "^1.0.0",
+    "axcora-theme-brutal": "^1.0.0",
+    "axcora-theme-corporate": "^1.0.0",
+    "axcora-theme-cyberpunk": "^1.0.0",
+    "axcora-theme-dark": "^1.0.0",
+    "axcora-theme-essentials": "^1.0.0",
+    "axcora-theme-minimal": "^1.0.0",
+    "axcora-theme-startup": "^1.0.0",
+    "axcora-toast": "^1.0.0",
+    "axcora-video": "^1.0.0",
+    "axcora-youtube": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+	"axcora-rocket": "npm run compile && npm run build",
+    "compile": "tsc --build",
+    "postinstall": "tsx src/config/postinstall-copy-components.ts && npm run compile",
+    "dev": "axcora dev",
+    "build": "axcora build",
+    "start": "axcora start"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.5"
+  }
+}
