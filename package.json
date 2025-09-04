@@ -1,6 +1,6 @@
 {
   "name": "axcora-ssg-starter",
-  "version": "1.0.0-athena",
+  "version": "1.0.1-athenas",
   "description": "Starter template for Axcora Static Site Generator including default config, templates, and sample content.",
   "keywords": [
     "axcora",
