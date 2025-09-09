@@ -57,7 +57,7 @@ Requires **Node.js v20+**
 Quick Start
 
 ```bash
-npm install axcora
+npm install -g axcora
 axcora -V
 axcora init myproject
 cd myproject
