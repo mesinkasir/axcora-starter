@@ -26,7 +26,7 @@ Combine a next-gen static site generator (Markdown/YAML/templating) with a modul
 ## 🚀 Key Features
 
 - **Automatic Static Site Generation:**  
-  Every markdown file in the `content/` directory becomes a fully linked page, blog post, tag, and category, with slugs and navigation auto-generated.
+  Every markdown file in the `content` directory becomes a fully linked page, blog post, tag, and category, with slugs and navigation auto-generated.
 
 - **Modular Templating with `.axcora`:**  
   Use `.axcora` templates, layouts, partials, blocks, slots, and frontmatter for flexible, composable, DRY page structures.
